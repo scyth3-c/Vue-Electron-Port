@@ -1,7 +1,7 @@
 <script>
   
   
-const API = 'http://localhost:3000/'
+const API = 'https://knocknotes.herokuapp.com/'
 
   export default
   {
