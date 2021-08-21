@@ -9,7 +9,6 @@
           <input placeholder=" aprender vue" class="col-md-3 mr-ms-2 form-control" v-model="search" autofocus @change="sendSearch" type="text">
            <b-button  @click="refresh" class="_query ml-2 my-sm-2 btn btn-secondary">fix refresh <b-icon icon="hammer"></b-icon> </b-button>
        
-
        <div class="ml-5">
            <span class="navbar-brand badge badge-warning"> {{totalCount}} Documentos Actuales </span>
         <a href="https://github.com/scyth3-c">
