@@ -62,7 +62,7 @@ export default {
     },
     methods: {
         async charge(id){
-             const res = await this.axios.get(`${this.url}show?id=${id}`);
+             const res = await this.axios.get(`${this.url}notes/show?id=${id}`);
              this.id = id;
              console.log(res);
              this.nombre = res.data.nombre;
