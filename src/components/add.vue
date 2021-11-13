@@ -46,7 +46,7 @@ export default {
           {
            this.alert('add', 'los datos son muy cortos')
           } else{
-               await this.axios.post(`${this.url}new?nombre=${this.nombre}&conten=${this.conten}`);
+               await this.axios.post(`${this.url}notes/new?nombre=${this.nombre}&conten=${this.conten}`);
               this.nombre = '';
               this.conten = '';
               this.alert('add', 'agregado! buscala por su nombre');
