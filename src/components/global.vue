@@ -1,7 +1,7 @@
 <script>
   
   
-const API = 'https://knocknotes-api.herokuapp.com/'
+const API = 'https://knock-api-ts.herokuapp.com/notes/'
 
   export default
   {
