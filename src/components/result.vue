@@ -69,7 +69,7 @@ export default {
     methods:{
       async charge(){
         const res = await this.axios.get(`${this.url}recollector`);
-        this.resultSearch = res.data;
+        this.resultSearch = res.data.tasks
       },
       show(id){
         this.$root.$emit('show',id);
