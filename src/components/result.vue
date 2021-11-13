@@ -68,7 +68,7 @@ export default {
     },
     methods:{
       async charge(){
-        const res = await this.axios.get(`${this.url}/notes/recollector`);
+        const res = await this.axios.get(`${this.url}notes/recollector`);
         this.resultSearch = res.data;
       },
       show(id){
