@@ -62,7 +62,7 @@ export default {
          this.count();
       },
       async count(){
-          const total = await this.axios.post(`${this.url}items`);
+          const total = await this.axios.post(`${this.url}notes/items`);
           if(this.totalCount >= 1000) {
             this.totalCount = '+999';
           } else {
