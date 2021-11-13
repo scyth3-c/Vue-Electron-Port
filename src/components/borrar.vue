@@ -48,7 +48,7 @@ export default {
       async charge() {
         if(this.charge != undefined && this.id != 0)
         {
-          await this.axios.delete(`${this.url}delete?id=${this.id}`);
+          await this.axios.delete(`${this.url}notes/delete?id=${this.id}`);
            this.alert('alt','borrado o ignorado al buscar se actualiara la lista =.=');
           this.nombre = '';
           this.id = '';
