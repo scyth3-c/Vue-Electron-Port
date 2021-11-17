@@ -27,10 +27,10 @@
           </b-col>
       </b-row>
        <span><b-badge>ID: {{id}}</b-badge></span>
+       <b-button @click="_delete" variant="danger" class="btn btn-sm ml-3 mt-1"><b-icon variant="white" icon="trash"></b-icon></b-button>
    
     </b-card>
-   
-  
+   <div id="alt"></div>
    </b-container>
 
 
@@ -54,11 +54,6 @@ export default {
        this.$root.$on('show',(id) =>{
           this.charge(id);
        });
-       this.$root.$on('borra',()=>{
-        this.nombre = '';
-        this.contenido = '';
-        this.id = '';
-       });
     },
     methods: {
         async charge(id){
@@ -71,6 +66,32 @@ export default {
         reset(){
              this.nombre ='';
              this.contenido ='';
+        },
+       async _delete(){
+          if(this.nombre == undefined)
+          {
+              this.alert('alt','no hay nota que borrar!');
+          } else {
+              await this.axios.delete(`${this.url}notes/delete?id=${this.id}`);
+              this.nombre = '';
+              this.contenido = '';
+              this.alert('alt','borrado! en caso de error solo se omita! =_=');
+          }
+          
+        },
+          alert(id,any){
+           const desk = document.getElementById(id);
+             const alert = document.createElement('div');
+             alert.setAttribute('id','alerta');
+             alert.innerHTML = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
+                         ${any}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="document.getElementById('alt').removeChild(document.getElementById('alerta'));">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>`; 
+
+            desk.appendChild(alert);
+           this.$root.$emit('refresh');
         }
     }
 }
