@@ -68,14 +68,14 @@ export default {
              this.contenido ='';
         },
        async _delete(){
-          if(this.nombre == undefined)
+          if(this.nombre == '')
           {
               this.alert('alt','no hay nota que borrar!');
           } else {
               await this.axios.delete(`${this.url}notes/delete?id=${this.id}`);
               this.nombre = '';
               this.contenido = '';
-              this.alert('alt','borrado! en caso de error solo se omita! =_=');
+              this.alert('alt','borrado! en caso de estar vacio solo se omita! =_=');
           }
           
         },
