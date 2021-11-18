@@ -66,6 +66,7 @@ export default {
         reset(){
              this.nombre ='';
              this.contenido ='';
+             this.id=' ';
         },
        async _delete(){
           if(this.nombre == '')
@@ -73,8 +74,7 @@ export default {
               this.alert('alt','no hay nota que borrar!');
           } else {
               await this.axios.delete(`${this.url}notes/delete?id=${this.id}`);
-              this.nombre = '';
-              this.contenido = '';
+              this.reset();
               this.alert('alt','borrado! en caso de estar vacio solo se omita! =_=');
           }
           

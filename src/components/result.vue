@@ -64,6 +64,7 @@ export default {
        }),
        this.$root.$on('refresh',()=>{
          this.charge();
+         this.$$root.$emit()
        })
     },
     methods:{

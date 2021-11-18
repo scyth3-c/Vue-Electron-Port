@@ -56,6 +56,11 @@ export default {
           search: ''
         }
     },
+    created(){
+      this.$root.$on('refresh',()=>{
+      this.count();
+      });
+    },
     methods:{
       refresh(){
          this.$root.$emit('refresh');
