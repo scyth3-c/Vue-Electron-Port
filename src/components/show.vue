@@ -59,7 +59,6 @@ export default {
         async charge(id){
              const res = await this.axios.get(`${this.url}notes/show?id=${id}`);
              this.id = id;
-             console.log(res);
              this.nombre = res.data.nombre;
              this.contenido = res.data.conten;
         },
