@@ -57,7 +57,7 @@ export default {
                   data:body
                   });
               } catch (error) {
-                return   this.alert('add','error al enviar la nota!');
+                this.alert('add','error al enviar la nota!');
               }
               }
               this.$root.$emit('refresh');
@@ -79,9 +79,8 @@ export default {
                         </div>`; 
              desk.appendChild(alert);
              this.$root.$emit('refresh');
+         }
         }
-        },
-       
     }
 
 </script>
