@@ -44,15 +44,30 @@ export default {
         async charge(){
           if(this.nombre.length <= 4 && this.conten.length <= 10)
           {
-           this.alert('add', 'los datos son muy cortos')
+           this.alert('add', 'los datos son muy cortos');
           } else{
-               await this.axios.post(`${this.url}notes/new?nombre=${this.nombre}&conten=${this.conten}`);
+              try {
+              let body = {
+                  nombre: this.nombre,
+                  conten: this.conten
+              }
+              await this.axios({
+                  method:'POST',
+                  url:`${this.url}notes/new`,
+                  data:body
+                  });
+              } catch (error) {
+                return   this.alert('add','error al enviar la nota!');
+              }
+              }
+              this.$root.$emit('refresh');
+              this.alert('add',`${this.nombre} agregado correctamente!`);
+              this.$root.$emit('buscar',this.nombre);
+              this.$root.$emit('input-value',this.nombre);
               this.nombre = '';
               this.conten = '';
-              this.alert('add', 'agregado! buscala por su nombre');
-          }
-        },
-        alert(id,any){
+          },
+           alert(id,any){
            const desk = document.getElementById(id);
              const alert = document.createElement('div');
              alert.setAttribute('id','alerta');
@@ -65,6 +80,8 @@ export default {
              desk.appendChild(alert);
              this.$root.$emit('refresh');
         }
+        },
+       
     }
-}
+
 </script>

@@ -58,14 +58,13 @@ export default {
         }
     },
     created() {
-      this.charge();
+       this.charge();
        this.$root.$on('buscar', (text) =>{
            this.searchText = text;
-       }),
+       });
        this.$root.$on('refresh',()=>{
          this.charge();
-         this.$root.$emit()
-       })
+       });
     },
     methods:{
       async charge(){

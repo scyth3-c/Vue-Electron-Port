@@ -6,7 +6,7 @@
          <span class="navbar-brand h3">KnockNotes</span>
       </div>
     
-          <input placeholder=" aprender vue" class="col-md-3 mr-ms-2 form-control" v-model="search" autofocus @change="sendSearch" type="text">
+          <input id="barra-input" placeholder=" aprender vue" class="col-md-3 mr-ms-2 form-control" v-model="search" autofocus @change="sendSearch" type="text">
            <b-button  @click="refresh" class="_query ml-2 my-sm-2 btn btn-secondary">fix refresh <b-icon icon="hammer"></b-icon> </b-button>
        
        <div class="ml-5">
@@ -46,7 +46,6 @@
 
 <script>
 
-
 export default {
     name: 'barra',
     data() {
@@ -59,6 +58,10 @@ export default {
     created(){
       this.$root.$on('refresh',()=>{
       this.count();
+      });
+      this.$root.$on('input-value',(data)=>{
+        document.getElementById('barra-input').textContent=data;
+        this.search = data;
       });
     },
     methods:{
