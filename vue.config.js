@@ -2,6 +2,7 @@ module.exports = {
     pluginOptions: {
     electronBuilder: {
         builderOptions: {
+
             productName: "Knock Notes",
             appId: 'bohordo.codes',
             win: {
@@ -14,11 +15,13 @@ module.exports = {
             "nsis": {
                 "installerIcon": "public/favicon.ico",
                 "uninstallerIcon": "public/favicon.ico",
-                "uninstallDisplayName": "CPU Monitor",
+                "uninstallDisplayName": "Knock Notes",
                 "license": "license.txt",
                 "oneClick": false,
                 "allowToChangeInstallationDirectory": true
             }
+
+            
         },
     },
 },
