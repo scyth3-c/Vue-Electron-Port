@@ -20,15 +20,6 @@
   </div>
 </template>
 
-<style scoped>
-  ._q77 {
-    display: flex;
-
-  }
-
-</style>
-
-
 <script>
 
 import barra from './components/barra.vue'
