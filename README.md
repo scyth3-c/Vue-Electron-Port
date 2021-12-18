@@ -1,7 +1,5 @@
 # vue and electron
 
-## rewritten knock-notes
-
 [**HEROKU PROJECT**](https://knocknotes.herokuapp.com/)
 
 [**API REST TYPESCRIPT**](https://knock-api-ts.herokuapp.com/)
