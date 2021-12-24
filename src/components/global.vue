@@ -1,7 +1,6 @@
 <script>
-  
-  
-const API = 'https://knock-api-ts.herokuapp.com/'
+   
+  const API = " API HERE";
 
   export default
   {
