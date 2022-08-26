@@ -3,8 +3,6 @@
 [**FIREBASE WEBAPP**](https://knocknotes.web.app)
 [**HEROKU WEBAPP**](https://knocknotes.herokuapp.com/)
 
-[**API REST TYPESCRIPT**](https://knock-api-ts.herokuapp.com/)
-[**API source code**](https://github.com/scyth3-c/API-TS-NODEJS)
 
 ![image](https://user-images.githubusercontent.com/52190352/144729402-b82e52ba-e181-4c8d-a8fa-387427bd2456.png)
 
