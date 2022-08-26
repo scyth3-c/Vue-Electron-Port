@@ -1,6 +1,6 @@
 <script>
    
-  const API = " API HERE";
+  const API = "https://lobster-app-tadp5.ondigitalocean.app/";
 
   export default
   {
